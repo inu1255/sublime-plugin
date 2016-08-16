@@ -1,0 +1,16 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+@import "~asha/_.less";
+
+.inu-${TM_FILENAME/\.less//g}{
+    $2
+}
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>im</tabTrigger>
+  <description>import _.less</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.less</scope>
+</snippet>
