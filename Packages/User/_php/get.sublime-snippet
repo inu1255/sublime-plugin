@@ -1,0 +1,14 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+->get("/$1", function (Application \$app, Request \$request) {
+    $2
+});
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>->get</tabTrigger>
+  <description>->get()</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.php</scope>
+</snippet>

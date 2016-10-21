@@ -1,0 +1,43 @@
+{
+	"bootstrapped": true,
+	"channels":
+	[
+		"https://packagecontrol.io/channel_v3.json",
+		"https://web.archive.org/web/https://packagecontrol.io/channel_v3.json"
+	],
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"ApplySyntax",
+		"AutoFileName",
+		"Babel",
+		"BracketHighlighter",
+		"Codecs33",
+		"ConvertToUTF8",
+		"DashDoc",
+		"DocBlockr",
+		"Emmet",
+		"ExpandRegion",
+		"FileDiffs",
+		"Gist",
+		"HTML-CSS-JS Prettify",
+		"JsFormat",
+		"JSON Reindent",
+		"JSX",
+		"LESS",
+		"Markdown Extended",
+		"OmniMarkupPreviewer",
+		"Package Control",
+		"PHP-Twig",
+		"phpfmt",
+		"ProjectManager",
+		"SFTP",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-php"
+	]
+}
