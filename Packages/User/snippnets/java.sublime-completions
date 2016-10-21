@@ -1,8 +1,0 @@
-{
-   "scope": "source.java",
-   "completions":
-   [
-      { "trigger": "psvm", "contents": "public static void main(String[] argv){\n\t${1:}\n}"},
-      { "trigger": "sop", "contents": "System.out.println(${1});" },
-   ]
-}
