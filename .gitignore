@@ -1,1 +1,41 @@
 .DS_Store
+Backup/
+Cache/
+Index/
+Installed Packages/0_package_control_loader.sublime-package
+Installed Packages/Alignment.sublime-package
+Installed Packages/ApplySyntax.sublime-package
+Installed Packages/AutoFileName.sublime-package
+Installed Packages/BracketHighlighter.sublime-package
+Installed Packages/DashDoc.sublime-package
+Installed Packages/DocBlockr.sublime-package
+Installed Packages/Emmet.sublime-package
+Installed Packages/ExpandRegion.sublime-package
+Installed Packages/FileDiffs.sublime-package
+Installed Packages/Gist.sublime-package
+Installed Packages/JSON Reindent.sublime-package
+Installed Packages/JSX.sublime-package
+Installed Packages/JsFormat.sublime-package
+Installed Packages/LESS.sublime-package
+Installed Packages/Markdown Extended.sublime-package
+Installed Packages/PHP-Twig.sublime-package
+Installed Packages/ProjectManager.sublime-package
+Installed Packages/PyV8/
+Installed Packages/README.md
+Installed Packages/SublimeLinter-php.sublime-package
+Local/
+Packages/Babel/
+Packages/Codecs33/
+Packages/ConvertToUTF8/
+Packages/HTML-CSS-JS Prettify/
+Packages/OmniMarkupPreviewer/
+Packages/PyV8/
+Packages/README.md
+Packages/SFTP/
+Packages/SublimeCodeIntel/
+Packages/SublimeLinter-contrib-eslint/
+Packages/SublimeLinter/
+Packages/backrefs/
+Packages/bz2/
+Packages/phpfmt/
+Packages/pyyaml/
