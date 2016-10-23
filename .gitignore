@@ -2,27 +2,7 @@
 Backup/
 Cache/
 Index/
-Installed Packages/0_package_control_loader.sublime-package
-Installed Packages/Alignment.sublime-package
-Installed Packages/ApplySyntax.sublime-package
-Installed Packages/AutoFileName.sublime-package
-Installed Packages/BracketHighlighter.sublime-package
-Installed Packages/DashDoc.sublime-package
-Installed Packages/DocBlockr.sublime-package
-Installed Packages/Emmet.sublime-package
-Installed Packages/ExpandRegion.sublime-package
-Installed Packages/FileDiffs.sublime-package
-Installed Packages/Gist.sublime-package
-Installed Packages/JSON Reindent.sublime-package
-Installed Packages/JSX.sublime-package
-Installed Packages/JsFormat.sublime-package
-Installed Packages/LESS.sublime-package
-Installed Packages/Markdown Extended.sublime-package
-Installed Packages/PHP-Twig.sublime-package
-Installed Packages/ProjectManager.sublime-package
-Installed Packages/PyV8/
-Installed Packages/README.md
-Installed Packages/SublimeLinter-php.sublime-package
+Installed Packages/
 Local/
 Packages/Babel/
 Packages/Codecs33/
@@ -40,3 +20,4 @@ Packages/bz2/
 Packages/phpfmt/
 Packages/pyyaml/
 Packages/User/Package Control.last-run
+Packages/User/Package Control.cache/
