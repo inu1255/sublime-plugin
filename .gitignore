@@ -22,3 +22,5 @@ Packages/pyyaml/
 Packages/User/Package Control.last-run
 Packages/User/Package Control.cache/
 Packages/User/encoding_cache.json
+Packages/User/Package Control.merged-ca-bundle
+Packages/User/oscrypto-ca-bundle.crt
