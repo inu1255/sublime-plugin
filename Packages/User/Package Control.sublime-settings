@@ -7,7 +7,6 @@
 	],
 	"in_process_packages":
 	[
-		"ProjectManager"
 	],
 	"installed_packages":
 	[
@@ -24,6 +23,7 @@
 		"ExpandRegion",
 		"FileDiffs",
 		"Gist",
+		"GitGutter",
 		"HexViewer",
 		"HTML-CSS-JS Prettify",
 		"Insert Nums",
@@ -40,6 +40,7 @@
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
-		"SublimeLinter-php"
+		"SublimeLinter-php",
+		"Sublimerge Pro"
 	]
 }
