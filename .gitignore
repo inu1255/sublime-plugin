@@ -4,24 +4,8 @@ Cache/
 Index/
 Installed Packages/
 Local/
-Packages/Babel/
-Packages/Codecs33/
-Packages/ConvertToUTF8/
-Packages/HTML-CSS-JS Prettify/
-Packages/OmniMarkupPreviewer/
-Packages/PyV8/
-Packages/README.md
-Packages/SFTP/
-Packages/SublimeCodeIntel/
-Packages/SublimeLinter-contrib-eslint/
-Packages/SublimeLinter/
-Packages/backrefs/
-Packages/bz2/
-Packages/phpfmt/
-Packages/pyyaml/
-Packages/GoSublime/
-Packages/Sublimerge Pro/
-Packages/Gutter Color/
+Packages/
+!Packages/User/
 Packages/User/Package Control.last-run
 Packages/User/Package Control.cache/
 Packages/User/GoSublime/

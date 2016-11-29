@@ -1,6 +1,5 @@
 {
     "env": {
-        "GOPATH": "/Users/inu1255/go/",
-        "GOROOT": "/usr/local/Cellar/go/1.7.1/libexec/"
+        "GOPATH": "/Users/inu1255/go/"
     }
 }
