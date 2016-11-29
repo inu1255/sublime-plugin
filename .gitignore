@@ -20,6 +20,8 @@ Packages/bz2/
 Packages/phpfmt/
 Packages/pyyaml/
 Packages/GoSublime/
+Packages/Sublimerge Pro/
+Packages/Gutter Color/
 Packages/User/Package Control.last-run
 Packages/User/Package Control.cache/
 Packages/User/GoSublime/
@@ -27,5 +29,4 @@ Packages/User/encoding_cache.json
 Packages/User/GoSublime-aux.sublime-settings
 Packages/User/Package Control.merged-ca-bundle
 Packages/User/oscrypto-ca-bundle.crt
-Packages/Sublimerge Pro/
 Packages/User/ApplySyntax.ext-list

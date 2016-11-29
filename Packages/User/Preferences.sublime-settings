@@ -1,7 +1,7 @@
 {
 	"afn_insert_dimensions": false,
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"color_scheme": "Packages/Gutter Color/Monokai (SL).gcfix.tmTheme",
 	"debug": true,
 	"folder_exclude_patterns":
 	[
