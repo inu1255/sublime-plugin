@@ -3,15 +3,16 @@
 	"channels":
 	[
 		"https://packagecontrol.io/channel_v3.json",
-		"https://web.archive.org/web/https://packagecontrol.io/channel_v3.json"
+		"http://inu1255.esy.es/proxy.php/https://packagecontrol.io/channel_v3.json"
 	],
 	"in_process_packages":
 	[
-		"Gutter Color"
 	],
 	"installed_packages":
 	[
+		"AdvancedNewFile",
 		"Alignment",
+		"All Autocomplete",
 		"ApplySyntax",
 		"AutoFileName",
 		"Babel",
@@ -35,15 +36,20 @@
 		"JSX",
 		"LESS",
 		"Markdown Extended",
+		"Nettuts+ Fetch",
 		"Package Control",
 		"PHP-Twig",
 		"phpfmt",
 		"ProjectManager",
+		"Seti_UI",
+		"Seti_UX",
 		"SFTP",
+		"SideBarEnhancements",
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-php",
-		"Sublimerge Pro"
+		"Sublimerge Pro",
+		"Themr"
 	]
 }
