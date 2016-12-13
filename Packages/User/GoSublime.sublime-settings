@@ -1,8 +1,9 @@
 {
-  "autocomplete_builtins": true,
-  "autocomplete_closures": true,
-  "autocomplete_suggest_imports":false,
+    "autocomplete_builtins": true,
+    "autocomplete_closures": true,
+    "autocomplete_suggest_imports":false,
     "env": {
         "GOPATH": "$HOME/go"
-    }
+    },
+    "fmt_cmd": ["goimports"]
 }
