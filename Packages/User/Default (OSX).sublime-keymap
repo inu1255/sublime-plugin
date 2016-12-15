@@ -52,4 +52,7 @@
 }, {
   "keys": ["f2"],
   "command": "advanced_new_file_move"
+}, {
+  "keys": ["super+alt+tab"],
+  "command": "alignment"
 }]

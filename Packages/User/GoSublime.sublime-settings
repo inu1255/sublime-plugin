@@ -1,7 +1,7 @@
 {
-    "autocomplete_builtins": true,
-    "autocomplete_closures": true,
-    "autocomplete_suggest_imports":false,
+  "autocomplete_builtins": true,
+  "autocomplete_closures": true,
+  "autocomplete_suggest_imports":true,
     "env": {
         "GOPATH": "$HOME/go"
     },

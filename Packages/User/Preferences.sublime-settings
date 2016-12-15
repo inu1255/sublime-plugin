@@ -2,7 +2,6 @@
 	"afn_insert_dimensions": false,
 	"bold_folder_labels": true,
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Gutter Color/Seti.gcfix.tmTheme",
 	"debug": true,
 	"folder_exclude_patterns":
 	[
