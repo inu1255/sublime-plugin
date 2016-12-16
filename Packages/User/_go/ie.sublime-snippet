@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+if err != nil {
+    ${1:log}.Fatalln(err)
+}
+$2
+]]></content>
+  <tabTrigger>ie</tabTrigger>
+  <description>if err != nil</description>
+  <scope>source.go</scope>
+</snippet>
