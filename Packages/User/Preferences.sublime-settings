@@ -2,7 +2,7 @@
 	"afn_insert_dimensions": false,
 	"bold_folder_labels": true,
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Seti_UI/Seti_monokai.tmTheme",
+	"color_scheme": "Packages/Seti_UX/Seti.tmTheme",
 	"debug": true,
 	"folder_exclude_patterns":
 	[
