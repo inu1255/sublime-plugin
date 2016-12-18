@@ -40,6 +40,7 @@
 		"Package Control",
 		"PHP-Twig",
 		"phpfmt",
+		"Pretty JSON",
 		"ProjectManager",
 		"Seti_UI",
 		"Seti_UX",
@@ -48,6 +49,7 @@
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-contrib-gotype",
 		"SublimeLinter-php",
 		"Sublimerge Pro",
 		"Themr"

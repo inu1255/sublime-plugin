@@ -1,58 +1,80 @@
-[{
-  "keys": [
-    "super+e"
-  ],
-  "args": {
-    "action": "expand_abbreviation"
-  },
-  "command": "run_emmet_action",
-  "context": [{
-    "key": "emmet_action_enabled.expand_abbreviation"
-  }]
-}, {
-  "keys": [
-    "tab"
-  ],
-  "command": "expand_abbreviation_by_tab",
-  "context": [{
-    "operand": "source.js",
-    "operator": "equal",
-    "match_all": true,
-    "key": "selector"
-  }, {
-    "key": "preceding_text",
-    "operator": "regex_contains",
-    "operand": "(\\b(a\\b|div|span|p\\b|button)(\\.\\w*|>\\w*)?([^}]*?}$)?)",
-    "match_all": true
-  }, {
-    "key": "selection_empty",
-    "operator": "equal",
-    "operand": true,
-    "match_all": true
-  }]
-}, {
-  "keys": [
-    "super+shift+space"
-  ],
-  "command": "expand_region"
-}, {
-  "keys": [
-    "super+u"
-  ],
-  "command": "expand_region",
-  "args": {
-    "undo": true
-  },
-  "context": [{
-    "key": "expand_region_soft_undo"
-  }]
-}, {
-  "keys": ["super+shift+n"],
-  "command": "advanced_new_file_new"
-}, {
-  "keys": ["f2"],
-  "command": "advanced_new_file_move"
-}, {
-  "keys": ["super+alt+tab"],
-  "command": "alignment"
-}]
+[
+    {
+        "keys": [
+            "super+e"
+        ],
+        "args": {
+            "action": "expand_abbreviation"
+        },
+        "command": "run_emmet_action",
+        "context": [
+            {
+                "key": "emmet_action_enabled.expand_abbreviation"
+            }
+        ]
+    },
+    {
+        "keys": [
+            "tab"
+        ],
+        "command": "expand_abbreviation_by_tab",
+        "context": [
+            {
+                "operand": "source.js",
+                "operator": "equal",
+                "match_all": true,
+                "key": "selector"
+            },
+            {
+                "key": "preceding_text",
+                "operator": "regex_contains",
+                "operand": "(\\b(a\\b|div|span|p\\b|button)(\\.\\w*|>\\w*)?([^}]*?}$)?)",
+                "match_all": true
+            },
+            {
+                "key": "selection_empty",
+                "operator": "equal",
+                "operand": true,
+                "match_all": true
+            }
+        ]
+    },
+    {
+        "keys": [
+            "super+shift+space"
+        ],
+        "command": "expand_region"
+    },
+    {
+        "keys": [
+            "super+u"
+        ],
+        "command": "expand_region",
+        "args": {
+            "undo": true
+        },
+        "context": [
+            {
+                "key": "expand_region_soft_undo"
+            }
+        ]
+    },
+    {
+        "keys": [
+            "super+shift+n"
+        ],
+        "command": "advanced_new_file_new"
+    },
+    {
+        "keys": [
+            "f2"
+        ],
+        "command": "advanced_new_file_move"
+    },
+    {
+        "keys": [
+            "super+alt+tab"
+        ],
+        "command": "alignment"
+    }
+]
