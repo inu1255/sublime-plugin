@@ -8,7 +8,7 @@ def goInstall(iDir):
     try:
         os.environ['GOPATH'] = os.environ["HOME"]+"/go"
         print (os.getcwd())
-        o =  subprocess.Popen(["go", "install"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        o =  subprocess.Popen(["/usr/local/bin/go", "install"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         p, err = o.communicate()
         print (p)
         print(err)

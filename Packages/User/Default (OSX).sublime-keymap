@@ -76,5 +76,9 @@
             "super+alt+tab"
         ],
         "command": "alignment"
+    },
+    {
+        "keys": ["super+.", "super+g"],
+        "command": "gotools_goto_def"
     }
 ]
