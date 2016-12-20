@@ -1,0 +1,44 @@
+<snippet>
+  <content><![CDATA[
+package model
+
+import (
+    "github.com/inu1255/gemrest"
+)
+type ${TM_FILENAME/(\S+)\.go$/\u$1/g}Search struct {
+
+}
+type ${TM_FILENAME/(\S+)\.go$/\u$1/g} struct {
+    ${TM_FILENAME/(\S+)\.go$/\u$1/g}Search `xorm:"extends"`
+}
+type ${TM_FILENAME/(\S+)\.go$/\u$1/g}Detail struct {
+    ${TM_FILENAME/(\S+)\.go$/\u$1/g}
+}
+
+func (this *${TM_FILENAME/(\S+)\.go$/\u$1/g}) TableName() string {
+    return "${TM_FILENAME/\.go$//g}"
+}
+
+func (this *${TM_FILENAME/(\S+)\.go$/\u$1/g}) GetDetail() interface{} {
+    return ${TM_FILENAME/(\S+)\.go$/\u$1/g}Detail{${TM_FILENAME/(\S+)\.go$/\u$1/g}: *this}
+}
+
+func (this *${TM_FILENAME/(\S+)\.go$/\u$1/g}) GetSearch() interface{} {
+    return this.${TM_FILENAME/(\S+)\.go$/\u$1/g}Search
+}
+
+type ${TM_FILENAME/(\S+)\.go$/\u$1/g}Service struct {
+    gemrest.ModelService
+}
+
+func New${TM_FILENAME/(\S+)\.go$/\u$1/g}Service() *${TM_FILENAME/(\S+)\.go$/\u$1/g}Service {
+    inst := &${TM_FILENAME/(\S+)\.go$/\u$1/g}Service{}
+    inst.SetTable(&${TM_FILENAME/(\S+)\.go$/\u$1/g}{})
+    return inst
+}
+
+]]></content>
+  <tabTrigger>model</tabTrigger>
+  <description>new model</description>
+  <scope>source.go</scope>
+</snippet>
