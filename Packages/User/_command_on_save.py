@@ -42,6 +42,8 @@ class GoGoInstallCommand(sublime_plugin.TextCommand):
         name = view.file_name()
         if (not name.lower().endswith('.go')):
             return
+        iDir = re.sub("/[^/]+$","",name)
+        os.chdir(iDir)
         t = threading.Thread(target=goInstall(iDir))
         t.daemon = True
         t.start() 
