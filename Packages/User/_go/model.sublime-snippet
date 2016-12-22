@@ -15,10 +15,6 @@ type ${TM_FILENAME/(\S+)\.go$/\u$1/g}Detail struct {
     ${TM_FILENAME/(\S+)\.go$/\u$1/g}
 }
 
-func (this *${TM_FILENAME/(\S+)\.go$/\u$1/g}) TableName() string {
-    return "${TM_FILENAME/\.go$//g}"
-}
-
 func (this *${TM_FILENAME/(\S+)\.go$/\u$1/g}) GetDetail() interface{} {
     return ${TM_FILENAME/(\S+)\.go$/\u$1/g}Detail{${TM_FILENAME/(\S+)\.go$/\u$1/g}: *this}
 }
@@ -29,6 +25,25 @@ func (this *${TM_FILENAME/(\S+)\.go$/\u$1/g}) GetSearch() interface{} {
 
 type ${TM_FILENAME/(\S+)\.go$/\u$1/g}Service struct {
     gemrest.ModelService
+}
+
+func (this *${TM_FILENAME/(\S+)\.go$/\u$1/g}Service) Insert(src *${TM_FILENAME/(\S+)\.go$/\u$1/g}) (*${TM_FILENAME/(\S+)\.go$/\u$1/g}, string) {
+  _, err := this.Db.Insert(src)
+  if err != nil {
+    return nil, err.Error()
+  }
+  return src, ""
+}
+
+func (this *${TM_FILENAME/(\S+)\.go$/\u$1/g}Service) Update(id string, src *${TM_FILENAME/(\S+)\.go$/\u$1/g}) (*${TM_FILENAME/(\S+)\.go$/\u$1/g}, string) {
+  n, err := this.Db.Id(id).Update(src)
+  if err != nil {
+    return nil, err.Error()
+  }
+  if n < 1 {
+    return nil, "目标不存在"
+  }
+  return src, ""
 }
 
 func New${TM_FILENAME/(\S+)\.go$/\u$1/g}Service() *${TM_FILENAME/(\S+)\.go$/\u$1/g}Service {

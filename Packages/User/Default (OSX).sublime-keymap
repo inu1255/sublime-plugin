@@ -79,6 +79,10 @@
     },
     {
         "keys": ["super+.", "super+g"],
-        "command": "gotools_goto_def"
+        "command": "go_go_def"
+    },
+    {
+        "keys": ["super+.", "super+i"],
+        "command": "go_go_install"
     }
 ]

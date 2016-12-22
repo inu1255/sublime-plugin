@@ -3,5 +3,7 @@
 	[
 		"pyw",
 		"py3"
-	]
+	],
+    "pep8_error_levels": {"E": "W"},
+    "auto_complete_triggers": [{"selector": "source.python - string - comment - constant.numeric", "characters": "."}]
 }

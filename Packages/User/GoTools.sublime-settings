@@ -17,7 +17,7 @@
   "goto_def_backend": "godef",
 
   // Enable gocode autocompletion.
-  "autocomplete": false,
+  "autocomplete": true,
 
   // Enable GoTools debugging output to the Sublime console.
   "debug_enabled": false,

@@ -1,5 +1,4 @@
 import threading
-import time
 import os
 import re
 import sublime_plugin
@@ -15,8 +14,8 @@ def goInstall(iDir):
     except:
         return
 
-class TrimTrailingWhiteSpace(sublime_plugin.EventListener):
-    def on_post_save(self, view):
+class SaveAndInstall(sublime_plugin.EventListener):
+    def on_post_save_(self, view):
         name = view.file_name()
         if (not name.lower().endswith('.go')):
             return
@@ -31,3 +30,18 @@ class TrimTrailingWhiteSpace(sublime_plugin.EventListener):
         t.daemon = True
         t.start() 
             
+class GoGoDefCommand(sublime_plugin.TextCommand):
+    def run(self,edit):
+        view = self.view
+        view.run_command("gs_doc",{"mode":"goto"})
+        view.run_command("gotools_goto_def")
+
+class GoGoInstallCommand(sublime_plugin.TextCommand):
+    def run(self,edit):
+        view = self.view
+        name = view.file_name()
+        if (not name.lower().endswith('.go')):
+            return
+        t = threading.Thread(target=goInstall(iDir))
+        t.daemon = True
+        t.start() 
