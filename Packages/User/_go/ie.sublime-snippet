@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[
 if err != nil {
-    ${1log.Println(err)}
+    ${1:log.Println(err)}
 }
 ]]></content>
   <tabTrigger>ie</tabTrigger>
