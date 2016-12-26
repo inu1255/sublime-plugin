@@ -50,7 +50,6 @@
 		"SideBarEnhancements",
 		"SublimeCodeIntel",
 		"SublimeLinter",
-		"SublimeLinter-contrib-clang",
 		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-contrib-gotype",
 		"SublimeLinter-php",
