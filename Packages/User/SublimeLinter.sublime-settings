@@ -7,6 +7,16 @@
         "gutter_theme_excludes": [],
         "lint_mode": "background",
         "linters": {
+            "clang": {
+                "@disable": false,
+                "args": [],
+                "excludes": [],
+                "extra_flags": "-Wall",
+                "include_dirs": [
+                    "/usr/local/Cellar/opencv3/HEAD-a4db983_4/include",
+                    "/usr/local/Cellar/opencv3/HEAD-a4db983_4/include/opencv"
+                ]
+            },
             "eslint": {
                 "@disable": false,
                 "args": [],

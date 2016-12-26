@@ -1,0 +1,4 @@
+{
+    "shell_cmd": "g++ `pkg-config --cflags --libs /usr/local/Cellar/opencv3/HEAD-a4db983_4/lib/pkgconfig/opencv.pc` $file -o $file_base_name",
+    "selector":"source.cpp"
+}
