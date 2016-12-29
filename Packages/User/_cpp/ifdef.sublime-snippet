@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+#ifdef ${1:DEBUG}
+    printf("${2:%d}",$3);
+#endif
+]]></content>
+  <tabTrigger>#ifdef</tabTrigger>
+  <description>#ifdef</description>
+  <scope>source.c,source.c++</scope>
+</snippet>
