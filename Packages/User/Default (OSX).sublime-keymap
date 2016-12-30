@@ -72,5 +72,11 @@
         "keys": ["super+.", "super+f"], "command": "anaconda_find_usages","context":[
             {"key": "selector","operand": "source.python", "operator": "equal", "match_all": true},
         ]
+    },
+    // c++
+    {
+        "keys": ["super+.", "super+g"], "command": "clang_goto_def","context":[
+            {"key": "selector","operand": "source.c++", "operator": "equal"},
+        ]
     }
 ]

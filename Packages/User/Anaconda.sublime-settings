@@ -2,13 +2,14 @@
     "pep8_ignore": [
         "E501"
     ],
-    "auto_formatting": true,
+    "auto_formatting": false,
     "enable_signatures_tooltip": false,
     "pep8_error_levels": {"E": "E", "W": "V", "V": "V"},
     "complete_parameters": true,
     "complete_all_parameters": false,
     "anaconda_linting_behaviour": "save-only",
     "anaconda_gutter_theme": "hard",
+    "pep8": false,
     "anaconda_linter_show_errors_on_save": true,
     "python_interpreter": "/usr/local/bin/python",
     "extra_paths": [

@@ -1,0 +1,46 @@
+{
+	"jdk_version":
+	{
+		"JDK1.7.0u80":
+		{
+			"path": "/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/bin",
+			"update": "80",
+			"version": "1.7.0"
+		},
+		"JDK1.8.0u112":
+		{
+			"path": "/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/bin",
+			"update": "112",
+			"version": "1.8.0"
+		},
+		"use": ""
+	},
+	"message_id": 20,
+	"project_data":
+	{
+		"2":
+		{
+			"build_systems":
+			[
+				{
+					"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+					"name": "Anaconda Python Builder",
+					"selector": "source.python",
+					"shell_cmd": "\"/usr/local/bin/python\" -u \"$file\""
+				}
+			],
+			"folders":
+			[
+				{
+					"path": "/Users/inu1255/Desktop/tederen/paper"
+				},
+				{
+					"path": "/Users/inu1255/Desktop/tederen/swig-test"
+				},
+				{
+					"path": "/Users/inu1255/Desktop/inu1255/scapy"
+				}
+			]
+		}
+	}
+}

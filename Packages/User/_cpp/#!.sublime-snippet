@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+#ifndef ${TM_FILENAME/(\w+)\.(\w+)/__\U$1_\U$2__/g}
+#define ${TM_FILENAME/(\w+)\.(\w+)/__\U$1_\U$2__/g}
+$1
+#endif
+]]></content>
+  <tabTrigger>#!</tabTrigger>
+  <description>#ifndef xxx</description>
+  <scope>source.c,source.c++</scope>
+</snippet>

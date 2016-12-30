@@ -10,7 +10,7 @@
 			"selector": "text.html"
 		},
 		{
-			"characters": ".",
+			"characters": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.",
 			"selector": "source.python"
 		}
 	],
