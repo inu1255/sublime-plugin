@@ -64,12 +64,12 @@
     },
     // python
     {
-        "keys": ["super+.", "super+g"], "command": "anaconda_goto","context":[
+        "keys": ["super+.", "super+g"], "command": "sublime_jedi_goto","context":[
             {"key": "selector","operand": "source.python", "operator": "equal", "match_all": true},
         ]
     },
     {
-        "keys": ["super+.", "super+f"], "command": "anaconda_find_usages","context":[
+        "keys": ["super+.", "super+f"], "command": "sublime_jedi_find_usages","context":[
             {"key": "selector","operand": "source.python", "operator": "equal", "match_all": true},
         ]
     },

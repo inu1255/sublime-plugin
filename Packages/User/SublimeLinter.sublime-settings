@@ -33,6 +33,15 @@
                 "excludes": [],
                 "gopath": "/Users/inu1255/go/"
             },
+            "javalint": {
+                "@disable": false,
+                "args": [
+                    "-cp",
+                    "sr4j.jar:."
+                ],
+                "excludes": [],
+                "lint": ""
+            },
             "php": {
                 "@disable": false,
                 "args": [],

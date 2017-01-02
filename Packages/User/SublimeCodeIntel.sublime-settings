@@ -1,10 +1,4 @@
 {
-    "codeintel_enabled_languages":
-    [
-       "JavaScript", "SCSS", "HTML",
-       "Ruby", "XML", "Sass", "HTML5", "Perl", "CSS",
-       "Twig", "Less", "Node.js", "TemplateToolkit", "PHP"
-    ],
     "codeintel_language_settings": {
         "JavaScript": {
             "codeintel_scan_extra_dir": [],
@@ -19,6 +13,10 @@
             "codeintel_scan_files_in_project": true,
             "codeintel_max_recursive_dir_depth": 15,
             "codeintel_scan_exclude_dir":["/usr/local/Cellar/php70/7.0.13_6"]
+        },
+        "Python": {
+            "python": "/usr/local/bin/python",
+            "pythonExtraPaths": ["/usr/local/lib/python2.7/site-packages"]
         }
     },
     "JavaScript": {
