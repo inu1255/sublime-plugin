@@ -34,7 +34,7 @@ class GoGoDefCommand(sublime_plugin.TextCommand):
     def run(self,edit):
         view = self.view
         view.run_command("gs_doc",{"mode":"goto"})
-        view.run_command("gotools_goto_def")
+        view.window().run_command("godef")
 
 class GoGoInstallCommand(sublime_plugin.TextCommand):
     def run(self,edit):
