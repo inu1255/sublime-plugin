@@ -3,6 +3,7 @@ import os
 import re
 import sublime_plugin
 import subprocess
+
 def goInstall(iDir):
     try:
         os.environ['GOPATH'] = os.environ["HOME"]+"/go"
@@ -47,3 +48,10 @@ class GoGoInstallCommand(sublime_plugin.TextCommand):
         t = threading.Thread(target=goInstall(iDir))
         t.daemon = True
         t.start() 
+
+class GoogleAutocomplete(sublime_plugin.EventListener):
+    def on_query_completions_(self, view, prefix, locations):
+        sugs = [[prefix,"%s($1)"%prefix]]
+        return sugs
+
+
