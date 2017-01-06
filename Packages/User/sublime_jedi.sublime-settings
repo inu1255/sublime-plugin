@@ -1,6 +1,6 @@
 {
     "python_interpreter": "/usr/local/bin/python",
-    "python_package_paths": ["/usr/local/lib/python2.7/site-packages"],
+    "python_package_paths": ["/usr/local/lib/python2.7/site-packages","/Applications/Sublime Text.app/Contents/MacOS"],
     "auto_complete_function_params": "required",
     "logging_level": "warn",
     "sublime_completions_visibility": "default"

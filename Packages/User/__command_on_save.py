@@ -49,9 +49,19 @@ class GoGoInstallCommand(sublime_plugin.TextCommand):
         t.daemon = True
         t.start() 
 
-class GoogleAutocomplete(sublime_plugin.EventListener):
-    def on_query_completions_(self, view, prefix, locations):
-        sugs = [[prefix,"%s($1)"%prefix]]
+BAIDU_AC = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%s&json=1&p=3&sid=1431_19034_21121_17001_20718&req=2&csor=2&cb=jQuery110208435955665111006_1483665242750&_=1483665242754"
+import urllib,json
+
+class BaiduAutocomplete(sublime_plugin.EventListener):
+    def on_query_completions(self, view, prefix, locations):
+        name = view.file_name()
+        if (not name.lower().endswith('.md')):
+            return
+        keyword = urllib.parse.quote(prefix)
+        # print(BAIDU_AC % keyword)
+        resp = urllib.request.urlopen(BAIDU_AC % keyword)
+        data = str(resp.read()[42:-2],"gbk")
+        # print(data)
+        p = json.loads(data)
+        sugs = [ [prefix+"("+s+")",s] for s in p["s"]]
         return sugs
-
-
