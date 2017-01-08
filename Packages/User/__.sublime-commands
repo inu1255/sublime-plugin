@@ -1,0 +1,16 @@
+[
+	{
+		"caption": "inu1255: open keymap",
+		"command": "open_file",
+		"args": {
+			"file": "${packages}/User/Default (OSX).sublime-keymap"
+		}
+	},
+	{
+		"caption": "inu1255: open commands",
+		"command": "open_file",
+		"args": {
+			"file": "${packages}/User/__.sublime-commands"
+		}
+	}
+]

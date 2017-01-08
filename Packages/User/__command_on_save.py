@@ -1,12 +1,12 @@
 import threading
-import os
-import re
-import sublime_plugin
+import os,re
+import sublime,sublime_plugin
 import subprocess
 
+os.environ['GOPATH'] = os.environ["HOME"]+"/go"
 def goInstall(iDir):
     try:
-        os.environ['GOPATH'] = os.environ["HOME"]+"/go"
+        # os.environ['GOPATH'] = os.environ["HOME"]+"/go"
         print (os.getcwd())
         o =  subprocess.Popen(["/usr/local/bin/go", "install"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         p, err = o.communicate()
@@ -31,11 +31,11 @@ class SaveAndInstall(sublime_plugin.EventListener):
         t.daemon = True
         t.start() 
             
-class GoGoDefCommand(sublime_plugin.TextCommand):
-    def run(self,edit):
-        view = self.view
-        view.run_command("gs_doc",{"mode":"goto"})
-        view.window().run_command("godef")
+# class GoGoDefCommand(sublime_plugin.TextCommand):
+#     def run(self,edit):
+#         view = self.view
+#         view.run_command("gs_doc",{"mode":"goto"})
+#         view.window().run_command("godef")
 
 class GoGoInstallCommand(sublime_plugin.TextCommand):
     def run(self,edit):
@@ -65,3 +65,26 @@ class BaiduAutocomplete(sublime_plugin.EventListener):
         p = json.loads(data)
         sugs = [ [prefix+"("+s+")",s] for s in p["s"]]
         return sugs
+
+class SelectExecCommand(sublime_plugin.TextCommand):
+    def run(self,edit):
+        view = self.view
+        # run(ls)
+        region = view.sel()[0]
+        if region.a>region.b:
+            region = sublime.Region(region.b,region.a)
+        command = view.substr(region)
+        if(command):
+            iDir = re.sub("/[^/]+$","",view.file_name())
+            os.chdir(iDir)
+            line = view.line(region)
+            a = sublime.Region(line.a,region.a)
+            b = sublime.Region(region.b,line.b)
+            a = view.substr(a).lstrip()
+            b = view.substr(b).rstrip()
+            # print(region.a,region.b)
+            # print(">",a,b,"<")
+            s = b+"\n"+a
+            output = os.popen(command).read()
+            output = output.replace("\n","$1"+s)[:-len(s)]
+            view.run_command("insert_snippet",args={"contents": output})

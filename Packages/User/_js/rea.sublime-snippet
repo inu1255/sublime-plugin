@@ -1,21 +1,23 @@
 <snippet>
-  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <!-- 
+page-not-find.js
+. -->
   <content><![CDATA[
 import React from 'react';
 import './${TM_FILENAME/js$/less/g}';
 
-class ${1:App} extends React.Component {
+class ${TM_FILENAME/(\.jsx?$)|((^|-|_)([\w\d]))/\u$4/g} extends React.Component {
     constructor(props) {
         super(props);
-        this.displayName = '$1';
+        this.displayName = '${TM_FILENAME/(\.jsx?$)|((^|-|_)([\w\d]))/\u$4/g}';
         this.state = {}
     }
     render() {
-        return div.inu-${TM_FILENAME/\.js$//g}$2
+        return div.inu-${TM_FILENAME/\.js$//g}$1
     }
 }
 
-export default ${1:App}
+export default ${TM_FILENAME/(\.jsx?$)|((^|-|_)([\w\d]))/\u$4/g}
 
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

@@ -38,11 +38,6 @@
         "keys": ["super+shift+space"], "command": "expand_region"
     },
     {
-        "keys": ["super+u"], "command": "expand_region", "args": {"undo": true }, "context": [
-            {"key": "expand_region_soft_undo"}
-        ]
-    },
-    {
         "keys": ["super+shift+n"], "command": "advanced_new_file_new"
     },
     {
@@ -53,7 +48,7 @@
     },
     // go
     {
-        "keys": ["super+.", "super+g"], "command": "go_go_def","context":[
+        "keys": ["super+.", "super+g"], "command": "godef","context":[
             {"key": "selector","operand": "source.go", "operator": "equal", "match_all": true},
         ]
     },
@@ -78,5 +73,8 @@
         "keys": ["super+.", "super+g"], "command": "clang_goto_def","context":[
             {"key": "selector","operand": "source.c++", "operator": "equal"},
         ]
+    },
+    {
+        "keys": ["super+.", "super+e"], "command": "select_exec"
     }
 ]
