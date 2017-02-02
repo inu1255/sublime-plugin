@@ -53,7 +53,7 @@ func New${TM_FILENAME/(\S+)\.go$/\u$1/g}Service() *${TM_FILENAME/(\S+)\.go$/\u$1
 }
 
 ]]></content>
-  <tabTrigger>model</tabTrigger>
+  <tabTrigger>nm</tabTrigger>
   <description>new model</description>
   <scope>source.go</scope>
 </snippet>

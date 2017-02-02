@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[
+// ${1:Search} ...
+// @Summary ${2:搜索}
+// @Description 
+// @Param X-AUTH-TOKEN  header  string  身份验证头
+// @Param what      query   string  false "选择字段,默认全部"
+// @Success 200 {array} models.Showtime
+// @router ${1/[A-Z]/\/\l$0/g} [get]
+func (m *${TM_FILENAME/(\S+)\.go$/\u$1/g}Controller) $1() (interface{}, error) {
+    $3 := this.Ctx.Request.FormValue("$3")
+}
+]]></content>
+  <tabTrigger>api</tabTrigger>
+  <description>api</description>
+  <scope>source.go</scope>
+</snippet>
