@@ -1,4 +1,3 @@
-.DS_Store
 Backup/
 Cache/
 Index/
@@ -18,3 +17,4 @@ Packages/User/Package Control.merged-ca-bundle
 Packages/User/oscrypto-ca-bundle.crt
 Packages/User/ApplySyntax.ext-list
 Packages/User/SublimeLinter/
+.DS_Store

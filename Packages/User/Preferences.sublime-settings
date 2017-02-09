@@ -7,7 +7,7 @@
 	"caret_extra_width": 1,
 	"caret_style": "blink",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Monokai.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
 	"debug": true,
 	"default_line_ending": "unix",
 	"fade_fold_buttons": false,
@@ -28,8 +28,13 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"BracketHighlighter",
+		"HexViewer",
+		"Jedi - Python autocompletion",
 		"Markdown",
-		"Vintage"
+		"SublimeLinter-contrib-gotype",
+		"Vintage",
+		"WakaTime"
 	],
 	"indent_guide_options":
 	[
