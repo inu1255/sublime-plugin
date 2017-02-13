@@ -7,10 +7,6 @@
 	],
 	"in_process_packages":
 	[
-		"BracketHighlighter",
-		"HexViewer",
-		"Jedi - Python autocompletion",
-		"WakaTime"
 	],
 	"installed_packages":
 	[

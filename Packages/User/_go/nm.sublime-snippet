@@ -6,14 +6,27 @@ import (
     "github.com/gin-gonic/gin"
 )
 
-// ${TM_FILENAME/(\S+)\.go$/\u$1/g} Entity
-type ${TM_FILENAME/(\S+)\.go$/\u$1/g} struct {
-    server.Model `xorm:"extends"`
-    ${1:Title} ${2:string} `json:"${1/(\S+)/\l$0/g},omitempty" xorm:""`
+type I${TM_FILENAME/(\S+)\.go$/\u$1/g}${3:Model} interface {
+    ${2:server.}I${1:OwnerModel}
 }
 
-func (u *${TM_FILENAME/(\S+)\.go$/\u$1/g}) Bind(g gin.IRouter) {
-    u.Model.Bind(g, u)
+// ${TM_FILENAME/(\S+)\.go$/\u$1/g} Entity
+type ${TM_FILENAME/(\S+)\.go$/\u$1/g}${3} struct {
+    ${2}${1:OwnerModel} `xorm:"extends"`
+}
+
+func (${TM_FILENAME/(\w)[\s\S]+/\l$1/g} *${TM_FILENAME/(\S+)\.go$/\u$1/g}${3}) New() ${2}Class {
+    model := &${TM_FILENAME/(\S+)\.go$/\u$1/g}${3}{}
+    model.SetSelf(model)
+    return model
+}
+
+func (${TM_FILENAME/(\w)[\s\S]+/\l$1/g} *${TM_FILENAME/(\S+)\.go$/\u$1/g}${3}) Bind(g gin.IRouter, self ${2}IModel) {
+    if self == nil {
+        ${TM_FILENAME/(\w)[\s\S]+/\l$1/g}.${1}.Bind(g, ${TM_FILENAME/(\w)[\s\S]+/\l$1/g})
+    } else {
+        ${TM_FILENAME/(\w)[\s\S]+/\l$1/g}.${1}.Bind(g, self)
+    }
 }
 
 ]]></content>

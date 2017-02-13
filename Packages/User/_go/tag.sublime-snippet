@@ -4,5 +4,5 @@ ${1:Title} ${2:string} `json:"${1/(\S+)/\l$0/g},omitempty" xorm:"not null"`
 ]]></content>
   <tabTrigger>tag</tabTrigger>
   <description>tag</description>
-  <scope>source.go meta.struct.go meta.block.go</scope>
+  <scope>source.go</scope>
 </snippet>
