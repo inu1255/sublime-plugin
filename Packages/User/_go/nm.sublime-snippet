@@ -6,22 +6,22 @@ import (
     "github.com/gin-gonic/gin"
 )
 
-type I${TM_FILENAME/(\S+)\.go$/\u$1/g}${3:Model} interface {
-    ${2:server.}I${1:OwnerModel}
+type I${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}${3:Model} interface {
+    ${2:server.}I${1:ItemAdminModel}
 }
 
-// ${TM_FILENAME/(\S+)\.go$/\u$1/g} Entity
-type ${TM_FILENAME/(\S+)\.go$/\u$1/g}${3} struct {
-    ${2}${1:OwnerModel} `xorm:"extends"`
+// ${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g} Entity
+type ${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}${3} struct {
+    ${2}${1:ItemAdminModel} `xorm:"extends"`
 }
 
-func (${TM_FILENAME/(\w)[\s\S]+/\l$1/g} *${TM_FILENAME/(\S+)\.go$/\u$1/g}${3}) New() ${2}Class {
-    model := &${TM_FILENAME/(\S+)\.go$/\u$1/g}${3}{}
+func (${TM_FILENAME/(\w)[\s\S]+/\l$1/g} *${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}${3}) New() ${2}Class {
+    model := &${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}${3}{}
     model.SetSelf(model)
     return model
 }
 
-func (${TM_FILENAME/(\w)[\s\S]+/\l$1/g} *${TM_FILENAME/(\S+)\.go$/\u$1/g}${3}) Bind(g gin.IRouter, self ${2}IModel) {
+func (${TM_FILENAME/(\w)[\s\S]+/\l$1/g} *${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}${3}) Bind(g gin.IRouter, self ${2}IModel) {
     if self == nil {
         ${TM_FILENAME/(\w)[\s\S]+/\l$1/g}.${1}.Bind(g, ${TM_FILENAME/(\w)[\s\S]+/\l$1/g})
     } else {

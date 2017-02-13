@@ -1,0 +1,131 @@
+[
+	{
+		"args":
+		{
+			"by": "wordends",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args": null,
+		"command": "copy"
+	},
+	{
+		"args":
+		{
+			"to": "eol"
+		},
+		"command": "move_to"
+	},
+	{
+		"args":
+		{
+			"characters": " "
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"contents": "`$0`"
+		},
+		"command": "insert_snippet"
+	},
+	{
+		"args":
+		{
+			"characters": "json"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": ":"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "\""
+		},
+		"command": "insert"
+	},
+	{
+		"args": null,
+		"command": "paste"
+	},
+	{
+		"args":
+		{
+			"by": "words",
+			"extend": true,
+			"forward": false
+		},
+		"command": "move"
+	},
+	{
+		"args": null,
+		"command": "lower_case"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"characters": ","
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "o"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "mi"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "t"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "emp"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "ty"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "\""
+		},
+		"command": "insert"
+	}
+]
