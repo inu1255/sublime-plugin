@@ -3,11 +3,11 @@
 package models
 
 import (
-    "github.com/gin-gonic/gin"
+. "github.com/inu1255/gev"
 )
 
 type I${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}${3:Model} interface {
-    ${2:server.}I${1:ItemAdminModel}
+    ${2}I${1:ItemAdminModel}
 }
 
 // ${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g} Entity
@@ -21,12 +21,11 @@ func (${TM_FILENAME/(\w)[\s\S]+/\l$1/g} *${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g
     return model
 }
 
-func (${TM_FILENAME/(\w)[\s\S]+/\l$1/g} *${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}${3}) Bind(g gin.IRouter, self ${2}IModel) {
+func (${TM_FILENAME/(\w)[\s\S]+/\l$1/g} *${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}${3}) Bind(g  ${2}ISwagRouter, self ${2}IModel) {
     if self == nil {
-        ${TM_FILENAME/(\w)[\s\S]+/\l$1/g}.${1}.Bind(g, ${TM_FILENAME/(\w)[\s\S]+/\l$1/g})
-    } else {
-        ${TM_FILENAME/(\w)[\s\S]+/\l$1/g}.${1}.Bind(g, self)
+      self = ${TM_FILENAME/(\w)[\s\S]+/\l$1/g}
     }
+    ${TM_FILENAME/(\w)[\s\S]+/\l$1/g}.${1}.Bind(g, self)
 }
 
 ]]></content>

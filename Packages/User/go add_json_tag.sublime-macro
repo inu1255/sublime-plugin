@@ -36,21 +36,7 @@
 	{
 		"args":
 		{
-			"characters": "json"
-		},
-		"command": "insert"
-	},
-	{
-		"args":
-		{
-			"characters": ":"
-		},
-		"command": "insert"
-	},
-	{
-		"args":
-		{
-			"characters": "\""
+			"characters": "json:\""
 		},
 		"command": "insert"
 	},
@@ -82,49 +68,7 @@
 	{
 		"args":
 		{
-			"characters": ","
-		},
-		"command": "insert"
-	},
-	{
-		"args":
-		{
-			"characters": "o"
-		},
-		"command": "insert"
-	},
-	{
-		"args":
-		{
-			"characters": "mi"
-		},
-		"command": "insert"
-	},
-	{
-		"args":
-		{
-			"characters": "t"
-		},
-		"command": "insert"
-	},
-	{
-		"args":
-		{
-			"characters": "emp"
-		},
-		"command": "insert"
-	},
-	{
-		"args":
-		{
-			"characters": "ty"
-		},
-		"command": "insert"
-	},
-	{
-		"args":
-		{
-			"characters": "\""
+			"characters": ",omitempty\" gev:\"\""
 		},
 		"command": "insert"
 	}
