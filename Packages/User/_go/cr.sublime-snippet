@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+func (${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g} *${1:${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}}) CanRead(user IUserModel) bool {
+    if u, ok := user.(IUserRoleModel); ok && u.GetRole() != "教师" {
+        return false
+    }
+    return ${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g}.ItemRoleModel.CanWrite(user)
+}
+]]></content>
+  <tabTrigger>cr</tabTrigger>
+  <description>CanRead</description>
+  <scope>source.go</scope>
+</snippet>

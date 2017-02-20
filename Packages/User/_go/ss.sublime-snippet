@@ -1,10 +1,10 @@
 <snippet>
   <content><![CDATA[
-func (${TM_FILENAME/(\w)[\s\S]+/\l$1/g} *${1:${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}}) GetCondition() ISearch {
+func (${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g} *${1:${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}}) GetCondition() ISearch {
     return &${2:SearchBody}{}
 }
 
-func (${TM_FILENAME/(\w)[\s\S]+/\l$1/g} *${1:${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}}) SearchSession(session *xorm.Session, condition ISearch) error {
+func (${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g} *${1:${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}}) SearchSession(session *xorm.Session, condition ISearch) error {
     search := condition.(*${2:SearchBody})
     $3
     return nil

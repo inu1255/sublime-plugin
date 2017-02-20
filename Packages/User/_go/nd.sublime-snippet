@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[
+import (
+  "errors"
+
+  . "github.com/inu1255/gev"
+)
+
+type ${1:${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}}Body struct {
+    Body
+}
+
+func (${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g} *$1Body) GetData(user IUserModel) (IModel, error) {
+    data := &$1{}
+    if t.IsNew() {
+        $2
+    }
+    return data, nil
+}
+
+]]></content>
+  <tabTrigger>nb</tabTrigger>
+  <description>new model body</description>
+  <scope>source.go</scope>
+</snippet>

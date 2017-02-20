@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+func (${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g} *${1:${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}}) GetRole() string {
+    return "${2:管理员}"
+}
+]]></content>
+  <tabTrigger>gr</tabTrigger>
+  <description>GetRole</description>
+  <scope>source.go</scope>
+</snippet>

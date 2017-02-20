@@ -1,31 +1,29 @@
 <snippet>
   <content><![CDATA[
-package models
-
 import (
 . "github.com/inu1255/gev"
 )
 
-type I${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}${3:Model} interface {
-    ${2}I${1:ItemAdminModel}
+type I${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g} interface {
+    I${1:ItemRoleModel}
 }
 
 // ${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g} Entity
-type ${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}${3} struct {
-    ${2}${1:ItemAdminModel} `xorm:"extends"`
+type ${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g} struct {
+    ${1:ItemRoleModel} `xorm:"extends"`
 }
 
-func (${TM_FILENAME/(\w)[\s\S]+/\l$1/g} *${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}${3}) New() ${2}Class {
-    model := &${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}${3}{}
+func (${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g} *${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}) New() Class {
+    model := &${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}{}
     model.SetSelf(model)
     return model
 }
 
-func (${TM_FILENAME/(\w)[\s\S]+/\l$1/g} *${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}${3}) Bind(g  ${2}ISwagRouter, self ${2}IModel) {
+func (${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g} *${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}) Bind(g  ISwagRouter, self IModel) {
     if self == nil {
-      self = ${TM_FILENAME/(\w)[\s\S]+/\l$1/g}
+      self = ${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g}
     }
-    ${TM_FILENAME/(\w)[\s\S]+/\l$1/g}.${1}.Bind(g, self)
+    ${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g}.${1}.Bind(g, self)
 }
 
 ]]></content>

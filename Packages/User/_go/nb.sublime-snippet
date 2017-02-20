@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[
+import (
+  "errors"
+
+  . "github.com/inu1255/gev"
+)
+
+type ${1:${TM_FILENAME/(\w+\.)*(\w+)body\.go$/\u$2/g}}Body struct {
+    ${3:Model}Body
+}
+
+func (${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g} *$1Body) GetData(user IUserModel) (IModel, error) {
+    data := &$1{}
+    if ${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g}.IsNew() {
+        ${2:return nil,errors.New("需要id")}
+    }
+    model, err := ${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g}.${3}Body.GetData(user)
+    data.${3} = *(model.(*${3}))
+    if err != nil {
+        return nil, err
+    }
+    return data, nil
+}
+
+]]></content>
+  <tabTrigger>nb</tabTrigger>
+  <description>new model body</description>
+  <scope>source.go</scope>
+</snippet>
