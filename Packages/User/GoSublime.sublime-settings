@@ -41,8 +41,8 @@
             "snippets": [
                 {
                     "text": "func (*${typename})",
-                    "title": "func (...) {...}",
-                    "value": "func (${1:${typename_abbr}} ${2:*}${typename}) ${3:name}($4)$5 {\n\t$0\n}"
+                    "title": "func (...) {...}${typename_abbr}",
+                    "value": "func (this ${1:*}${typename}) ${2:name}($3)$4 {\n\t$0\n}"
                 }
             ]
         },

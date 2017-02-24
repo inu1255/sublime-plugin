@@ -13,17 +13,17 @@ type ${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g} struct {
     ${1:ItemRoleModel} `xorm:"extends"`
 }
 
-func (${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g} *${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}) New() Class {
+func (this *${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}) New() Class {
     model := &${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}{}
     model.SetSelf(model)
     return model
 }
 
-func (${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g} *${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}) Bind(g  ISwagRouter, self IModel) {
+func (this *${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}) Bind(g  ISwagRouter, self IModel) {
     if self == nil {
-      self = ${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g}
+      self = this
     }
-    ${TM_FILENAME/(\w+\.)*(\w)\w+\.go/\l$2/g}.${1}.Bind(g, self)
+    this.${1}.Bind(g, self)
 }
 
 ]]></content>

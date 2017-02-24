@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+if search.${1:UserId} ${3:>0} {
+    session.Where("$2${1/[A-Z]/_\l$0/g}=?", search.$1)
+}
+]]></content>
+  <tabTrigger>iw</tabTrigger>
+  <description>if where != nil</description>
+  <scope>source.go</scope>
+</snippet>
