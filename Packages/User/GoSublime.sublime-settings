@@ -8,6 +8,7 @@
     "fmt_cmd": [
         "goimports"
     ],
+    "ipc_timeout": 5,
     "default_snippets": [
         {
             "match": {"global": false, "pkgname": ""},
