@@ -12,16 +12,13 @@ type ${1:${TM_FILENAME/(\w+\.)*(\w+)body\.go$/\u$2/g}}Body struct {
 
 func (this *$1Body) GetData(user IUserModel) (IModel, error) {
     data := &$1{}
-    data.SetSelf(data)
+    data.Id = this.Id
     if this.IsNew() {
         ${2:return nil,errors.New("需要id")}
     }
     model, err := this.${3}Body.GetData(user)
     data.${3} = *(model.(*${3}))
-    if err != nil {
-        return nil, err
-    }
-    return data, nil
+    return data, err
 }
 
 ]]></content>
