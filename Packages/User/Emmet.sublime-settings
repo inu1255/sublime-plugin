@@ -1,4 +1,5 @@
 {
+    "extensions_path": "~/emmet",
     // Custom snippets definitions, as per https://github.com/emmetio/emmet/blob/master/snippets.json
     "snippets": {
         "variables": {
@@ -9,9 +10,9 @@
             "newline": "\n"
         },
         "jsx": {
-            "filters": "html",
+            "filters": "dva",
             "extends": "html",
-            "profile": "xml",
+            "profile": "html",
             "abbreviations":{
 
             },
@@ -23,5 +24,8 @@
     "preferences": {
     },
     "syntaxProfiles": {
+        "html":{
+            "attr_quotes": "single"
+        }
     }
 }
