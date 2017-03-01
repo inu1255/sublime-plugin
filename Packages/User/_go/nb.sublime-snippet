@@ -11,13 +11,14 @@ type ${1:${TM_FILENAME/(\w+\.)*(\w+)body\.go$/\u$2/g}}Body struct {
 }
 
 func (this *$1Body) GetData(user IUserModel) (IModel, error) {
-    data := &$1{}
+    data := new($1)
     data.Id = this.Id
     if this.IsNew() {
         ${2:return nil,errors.New("需要id")}
     }
     model, err := this.${3}Body.GetData(user)
     data.${3} = *(model.(*${3}))
+    data.SetSelf(data)
     return data, err
 }
 
