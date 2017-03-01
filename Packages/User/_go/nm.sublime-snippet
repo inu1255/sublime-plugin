@@ -4,22 +4,22 @@ import (
 . "github.com/inu1255/gev"
 )
 
-type I${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g} interface {
-    I${1:ItemRoleModel}
+type I${2} interface {
+    I${1}
 }
 
-// ${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g} Entity
-type ${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g} struct {
+// ${2} Entity
+type ${2:${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}} struct {
     ${1:ItemRoleModel} `xorm:"extends"`
 }
 
-func (this *${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}) New() Class {
-    model := &${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}{}
+func (this *${2}) New() Class {
+    model := &${2}{}
     model.SetSelf(model)
     return model
 }
 
-func (this *${TM_FILENAME/(\w+\.)*(\w+)\.go$/\u$2/g}) Bind(g  ISwagRouter, self IModel) {
+func (this *${2}) Bind(g  ISwagRouter, self IModel) {
     if self == nil {
       self = this
     }
