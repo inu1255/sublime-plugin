@@ -1,0 +1,45 @@
+{
+  // autoformat on save
+  "autoformat": true,
+
+  // array of extensions for autoformat
+  // cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/jsfmt/
+  // npm i esformatter@latest esformatter-jsx@latest
+  "extensions": ["js", "jsx", "sublime-settings"],
+
+  // options for jsfmt
+  "options": {
+    "preset": "jquery",
+    "indent": {
+      "value": "  "
+    },
+    // plugins included
+    "plugins": [
+      // "esformatter-quotes",
+      // "esformatter-semicolons",
+      // "esformatter-braces",
+      // "esformatter-dot-notation"
+      "esformatter-jsx",
+    ],
+    "jsx": {
+      "formatJSX": true,
+      // change these to your preferred values
+      // refer to https://github.com/royriojas/esformatter-jsx#best-configuration for more options
+      "attrsOnSameLineAsTag": false,
+      "maxAttrsOnTag": 4,
+      "firstAttributeOnSameLine": false,
+      "alignWithFirstAttribute": true
+    }
+  },
+  "options-JSON": {
+    "plugins": [
+      "esformatter-quotes"
+    ],
+    "quotes": {
+      "type": "double"
+    }
+  },
+  "node-path": "node",
+  "alert-errors": true,
+  "ignore-selection": false
+}

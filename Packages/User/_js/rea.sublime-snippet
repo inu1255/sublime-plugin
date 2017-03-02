@@ -4,6 +4,7 @@ page-not-find.js
 . -->
   <content><![CDATA[
 import React from 'react';
+import { connect } from 'dva';
 import styles from './${TM_FILENAME/js$/less/g}';
 import classnames from "classnames/bind"
 const cx = classnames.bind(styles)
@@ -15,11 +16,11 @@ class ${TM_FILENAME/(\.jsx?$)|((^|-|_)([\w\d]))/\u$4/g} extends React.Component 
         this.state = {}
     }
     render() {
-        return div.${TM_FILENAME/\.js$//g}-container$1
+        return div.${TM_FILENAME/\.js$//g}-container${1:touch ${TM_FILENAME/js$/less/g}}
     }
 }
 
-export default ${TM_FILENAME/(\.jsx?$)|((^|-|_)([\w\d]))/\u$4/g}
+export default connect()(${TM_FILENAME/(\.jsx?$)|((^|-|_)([\w\d]))/\u$4/g});
 
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
