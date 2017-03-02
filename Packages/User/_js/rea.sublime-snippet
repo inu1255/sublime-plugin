@@ -4,7 +4,9 @@ page-not-find.js
 . -->
   <content><![CDATA[
 import React from 'react';
-import './${TM_FILENAME/js$/less/g}';
+import styles from './${TM_FILENAME/js$/less/g}';
+import classnames from "classnames/bind"
+const cx = classnames.bind(styles)
 
 class ${TM_FILENAME/(\.jsx?$)|((^|-|_)([\w\d]))/\u$4/g} extends React.Component {
     constructor(props) {
@@ -13,7 +15,7 @@ class ${TM_FILENAME/(\.jsx?$)|((^|-|_)([\w\d]))/\u$4/g} extends React.Component 
         this.state = {}
     }
     render() {
-        return div.inu-${TM_FILENAME/\.js$//g}$1
+        return div.${TM_FILENAME/\.js$//g}-container$1
     }
 }
 

@@ -76,5 +76,13 @@
     },
     {
         "keys": ["super+.", "super+e"], "command": "select_exec"
+    },
+    {
+        "keys": ["super+.", "super+k"], "command": "open_file", "args": {"file": "${packages}/User/Default (OSX).sublime-keymap", "platform": "OSX"}
+    },
+    {
+        "keys": ["super+.", "super+t"], "command": "test_inu", "args": {
+
+        }
     }
 ]
