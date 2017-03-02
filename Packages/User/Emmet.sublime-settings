@@ -10,7 +10,7 @@
             "newline": "\n"
         },
         "jsx": {
-            "filters": "dva",
+            "filters": "jsx,html,dva",
             "extends": "html",
             "profile": "html",
             "abbreviations":{
