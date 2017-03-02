@@ -40,6 +40,6 @@
     }
   },
   "node-path": "node",
-  "alert-errors": true,
+  "alert-errors": false,
   "ignore-selection": false
 }

@@ -11,16 +11,20 @@ const cx = classnames.bind(styles)
 
 class ${TM_FILENAME/(\.jsx?$)|((^|-|_)([\w\d]))/\u$4/g} extends React.Component {
     constructor(props) {
-        super(props);
-        this.displayName = '${TM_FILENAME/(\.jsx?$)|((^|-|_)([\w\d]))/\u$4/g}';
+        super(props)
+        this.displayName = '${TM_FILENAME/(\.jsx?$)|((^|-|_)([\w\d]))/\u$4/g}'
         this.state = {}
     }
     render() {
-        return div.${TM_FILENAME/\.js$//g}-container${1:touch ${TM_FILENAME/js$/less/g}}
+        return (
+            <div className={cx("${TM_FILENAME/\.js$//g}-container")}>
+                ${1:touch ${TM_FILENAME/js$/less/g}}
+            </div>
+        )
     }
 }
 
-export default connect()(${TM_FILENAME/(\.jsx?$)|((^|-|_)([\w\d]))/\u$4/g});
+export default connect()(${TM_FILENAME/(\.jsx?$)|((^|-|_)([\w\d]))/\u$4/g})
 
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
