@@ -11,7 +11,7 @@
   "options": {
     "preset": "jquery",
     "indent": {
-      "value": "  "
+      "value": "    "
     },
     // plugins included
     "plugins": [
