@@ -1,45 +1,55 @@
 {
-  // autoformat on save
-  "autoformat": true,
+    // autoformat on save
+    "autoformat": true,
 
-  // array of extensions for autoformat
-  // cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/jsfmt/
-  // npm i esformatter@latest esformatter-jsx@latest
-  "extensions": ["js", "jsx", "sublime-settings"],
+    // array of extensions for autoformat
+    // cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/jsfmt/
+    // npm i esformatter@latest esformatter-jsx@latest
+    "extensions": ["js", "jsx", "sublime-settings"],
 
-  // options for jsfmt
-  "options": {
-    "preset": "jquery",
-    "indent": {
-      "value": "    "
+    // options for jsfmt
+    "options": {
+        "preset": "jquery",
+        "indent": {
+            "value": "    "
+        },
+        "lineBreak": {
+            "value": "\n"
+        },
+        // plugins included
+        "plugins": [
+            // "esformatter-quotes",
+            // "esformatter-semicolons",
+            // "esformatter-braces",
+            // "esformatter-dot-notation"
+            "esformatter-jsx",
+        ],
+        "jsx": {
+            "formatJSX": true,
+            // change these to your preferred values
+            // refer to https://github.com/royriojas/esformatter-jsx#best-configuration for more options
+            "attrsOnSameLineAsTag": false,
+            "maxAttrsOnTag": 4,
+            "firstAttributeOnSameLine": false,
+            "alignWithFirstAttribute": true,
+            "htmlOptions": {
+                "indent_size": 4,
+                "indent_char": " "
+            }
+        }
     },
-    // plugins included
-    "plugins": [
-      // "esformatter-quotes",
-      // "esformatter-semicolons",
-      // "esformatter-braces",
-      // "esformatter-dot-notation"
-      "esformatter-jsx",
-    ],
-    "jsx": {
-      "formatJSX": true,
-      // change these to your preferred values
-      // refer to https://github.com/royriojas/esformatter-jsx#best-configuration for more options
-      "attrsOnSameLineAsTag": false,
-      "maxAttrsOnTag": 4,
-      "firstAttributeOnSameLine": false,
-      "alignWithFirstAttribute": true
-    }
-  },
-  "options-JSON": {
-    "plugins": [
-      "esformatter-quotes"
-    ],
-    "quotes": {
-      "type": "double"
-    }
-  },
-  "node-path": "node",
-  "alert-errors": false,
-  "ignore-selection": false
+    "options-JSON": {
+        "plugins": [
+            "esformatter-quotes"
+        ],
+        "quotes": {
+            "type": "double"
+        },
+        "indent": {
+            "value": "    "
+        }
+    },
+    "node-path": "node",
+    "alert-errors": false,
+    "ignore-selection": false
 }
