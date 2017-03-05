@@ -11,7 +11,10 @@
     "options": {
         "preset": "jquery",
         "indent": {
-            "value": "    "
+            "value": "    ",
+            "IfStatementConditional": 2,
+            "SwitchStatement": 0,
+            "TopLevelFunctionBlock": 1
         },
         "lineBreak": {
             "value": "\n"
