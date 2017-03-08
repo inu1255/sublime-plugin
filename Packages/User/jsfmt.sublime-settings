@@ -32,8 +32,8 @@
             // change these to your preferred values
             // refer to https://github.com/royriojas/esformatter-jsx#best-configuration for more options
             "attrsOnSameLineAsTag": false,
-            "maxAttrsOnTag": 4,
-            "firstAttributeOnSameLine": false,
+            "maxAttrsOnTag": 2,
+            "firstAttributeOnSameLine": true,
             "alignWithFirstAttribute": true,
             "htmlOptions": {
                 "indent_size": 4,
